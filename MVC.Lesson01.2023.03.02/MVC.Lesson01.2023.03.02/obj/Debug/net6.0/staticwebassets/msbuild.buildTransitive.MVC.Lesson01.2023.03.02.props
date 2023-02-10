@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\MVC.Lesson01.2023.03.02.props" />
+</Project>

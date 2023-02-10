@@ -16,6 +16,34 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Learning\asp.net-core\lesson1
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Learning/asp.net-core/lesson1/admin-panel/admin-panel/Views/DirectoryRoomProperties.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YWRtaW4tcGFuZWxcYWRtaW4tcGFuZWxcVmlld3NcRGlyZWN0b3J5Um9vbVByb3BlcnRpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Learning/asp.net-core/lesson1/admin-panel/admin-panel/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YWRtaW4tcGFuZWxcYWRtaW4tcGFuZWxcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Learning/asp.net-core/lesson1/admin-panel/admin-panel/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YWRtaW4tcGFuZWxcYWRtaW4tcGFuZWxcVmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Learning/asp.net-core/lesson1/admin-panel/admin-panel/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YWRtaW4tcGFuZWxcYWRtaW4tcGFuZWxcVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Learning/asp.net-core/lesson1/admin-panel/admin-panel/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YWRtaW4tcGFuZWxcYWRtaW4tcGFuZWxcVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Learning/asp.net-core/lesson1/admin-panel/admin-panel/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YWRtaW4tcGFuZWxcYWRtaW4tcGFuZWxcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Learning/asp.net-core/lesson1/admin-panel/admin-panel/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YWRtaW4tcGFuZWxcYWRtaW4tcGFuZWxcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Learning/asp.net-core/lesson1/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -43,6 +71,10 @@ build_metadata.AdditionalFiles.CssScope =
 [D:/Learning/asp.net-core/lesson1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Learning/asp.net-core/lesson1/admin-panel/admin-panel/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = YWRtaW4tcGFuZWxcYWRtaW4tcGFuZWxcVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-0lhpujfhbq
 
 [D:/Learning/asp.net-core/lesson1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s

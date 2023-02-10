@@ -1,0 +1,60 @@
+﻿@model RoomProperties
+
+<h1>Свойства комнат</h1>
+
+<hr />
+
+<table>
+    <thead>
+        <tr>
+            <td>Номер</td>
+            <td>Наименование</td>
+            <td>Дата создания</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Наименование</td>
+            <td>@DateTime.Now</td>
+        </tr>
+    </tbody>
+</table>
+
+<hr />
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Добавить свойство
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Свойство комнаты</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> 
+      <form asp-action="RoomPropertiesFile" method="post" enctype="multipart/form-data">
+      <div class="modal-body">
+
+          <div class="form-group">
+              <input type="text" asp-for="Name"
+                     class="form-control" />
+                     <br />
+              <input type="text" asp-for="Description"
+                     class="form-control" />
+                     <hr />
+                     <input type="file" class="form-control"
+                     name="photo"/>
+          </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
