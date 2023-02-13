@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\MVC.Lesson02.2023.02.10.Admin.props" />
-</Project>

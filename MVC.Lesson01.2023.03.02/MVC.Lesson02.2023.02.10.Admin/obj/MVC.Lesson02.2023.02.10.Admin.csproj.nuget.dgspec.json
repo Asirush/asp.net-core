@@ -27,7 +27,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Learning\\asp.net-core\\MVC.Lesson01.2023.03.02\\MVC.Lesson3.Lib\\MVC.Lesson3.Lib.csproj": {
+                "projectPath": "D:\\Learning\\asp.net-core\\MVC.Lesson01.2023.03.02\\MVC.Lesson3.Lib\\MVC.Lesson3.Lib.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -60,6 +64,21 @@
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
+      }
+    },
+    "D:\\Learning\\asp.net-core\\MVC.Lesson01.2023.03.02\\MVC.Lesson3.Lib\\MVC.Lesson3.Lib.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Learning\\asp.net-core\\MVC.Lesson01.2023.03.02\\MVC.Lesson3.Lib\\MVC.Lesson3.Lib.csproj",
+        "projectName": "MVC.Lesson3.Lib",
+        "projectPath": "D:\\Learning\\asp.net-core\\MVC.Lesson01.2023.03.02\\MVC.Lesson3.Lib\\MVC.Lesson3.Lib.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
       }
     }
   }

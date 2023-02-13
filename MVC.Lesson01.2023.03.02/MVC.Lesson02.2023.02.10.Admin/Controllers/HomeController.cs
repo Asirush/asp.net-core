@@ -15,6 +15,7 @@ namespace MVC.Lesson02._2023._02._10.Admin.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.CurrentDate = DateTime.Now;
             return View();
         }
 

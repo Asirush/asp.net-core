@@ -1,11 +1,29 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "MVC.Lesson3.Lib/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/MVC.Lesson3.Lib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVC.Lesson3.Lib.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "MVC.Lesson3.Lib/1.0.0": {
+      "type": "project",
+      "path": "../MVC.Lesson3.Lib/MVC.Lesson3.Lib.csproj",
+      "msbuildProject": "../MVC.Lesson3.Lib/MVC.Lesson3.Lib.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "MVC.Lesson3.Lib >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\asiru\\.nuget\\packages\\": {}
@@ -33,7 +51,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Learning\\asp.net-core\\MVC.Lesson01.2023.03.02\\MVC.Lesson3.Lib\\MVC.Lesson3.Lib.csproj": {
+              "projectPath": "D:\\Learning\\asp.net-core\\MVC.Lesson01.2023.03.02\\MVC.Lesson3.Lib\\MVC.Lesson3.Lib.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

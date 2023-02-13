@@ -7,4 +7,8 @@
     <RootNamespace>MVC.Lesson02._2023._02._10.Admin</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MVC.Lesson3.Lib\MVC.Lesson3.Lib.csproj" />
+  </ItemGroup>
+
 </Project>
