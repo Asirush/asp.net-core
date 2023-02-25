@@ -1,2 +1,0 @@
-D:\Learning\asp.net-core\MVC.Lesson01.2023.03.02\MVC.Lesson3.Lib\obj\Debug\MVC.Lesson3.Lib.csproj.AssemblyReference.cache
-D:\Learning\asp.net-core\MVC.Lesson01.2023.03.02\MVC.Lesson3.Lib\obj\Debug\MVC.Lesson3.Lib.csproj.CoreCompileInputs.cache
