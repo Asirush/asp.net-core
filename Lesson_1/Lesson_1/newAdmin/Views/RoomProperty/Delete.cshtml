@@ -1,0 +1,19 @@
+﻿@using newAdmin.Modals
+@model RoomProperty
+
+<h2>Delete</h2>
+
+<form asp-action="Delete" asp-controller="RoomProperty" method="post">
+    <div class="row">
+        <div class="col-md-4">
+            <label class="form-controll">
+                Name
+            </label>
+        </div>
+        <div class="col-md-6">
+            <input class="form-control" type="text" name="Name" />
+        </div>
+        <hr />
+        <button type="submit">Add</button>
+    </div>
+</form>

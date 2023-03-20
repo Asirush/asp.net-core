@@ -1,0 +1,26 @@
+﻿@using newAdmin.Modals;
+@model Carusel
+
+<form asp-action="AddCarusel" asp-controller="Corusel" method="post">
+    <div class="row">
+        <div class="col-md-6">Заголовок</div>
+        <div class="col-md-6">
+            <input type="text" asp-for="Tirle" />
+        </div>
+
+        <br />
+
+        <div class="col-md-6">Описание</div>
+        <div class="col-md-6">
+            <input type="text" asp-for="Description" />
+        </div>
+
+        <br />
+
+        <div class="col-md-6">Автор</div>
+        <div class="col-md-6">
+            <input type="text" asp-for="CreateUser" />
+        </div>
+
+    </div>
+</form>

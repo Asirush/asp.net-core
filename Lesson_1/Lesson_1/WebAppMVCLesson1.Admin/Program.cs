@@ -1,10 +1,14 @@
 ﻿using WebAppMVCLesson1.Admin.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+
+builder.Services.AddDbContext<EFContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 // Это внедрение зависимости с сопоставлением типа службы и сопоставлением типа реализации
 builder.Services.AddTransient<IRepository, Repository>();
 builder.Services.AddTransient<IStorage, Storage>();

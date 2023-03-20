@@ -8,14 +8,18 @@ namespace WebAppMVCLesson1.Admin.Controllers
     public class DirectoryController : Controller
     {
         private IWebHostEnvironment hostEnvironment;
-        public DirectoryController(IWebHostEnvironment _hostEnvironment)
+        private IConfiguration configuration;
+        public DirectoryController(IWebHostEnvironment _hostEnvironment, IConfiguration configuration)
         {
             hostEnvironment = _hostEnvironment;
+            this.configuration = configuration;
         }
-
 
         public IActionResult Index(string message)
         {
+            var option1 = configuration.GetValue<string>("customOptions:complexOption:option1");
+            var option2 = configuration.GetSection("customOptions").GetSection("complexOption").GetSection("option2").Value;
+
             //return View("~/Views/Home/Privacy.cshtml", "test");
             //return View("DirectoryRoomProperties");
 

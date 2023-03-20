@@ -1,0 +1,30 @@
+﻿@using newAdmin.Modals;
+@model List<Carusel>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Дата создания</th>
+            <th>Заголовок</th>
+            <th>Описание</th>
+            <th>Автор</th>
+            <th>Срок действия</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Carusel item in Model)
+        {
+            <tr>
+                <th>@item.CarurelId</th>
+                <th>@string.Format("{0:dd.mm.yyyy}", item.CreateDate)</th>
+                <th>@item.Tirle</th>
+                <th>@item.Description</th>
+                <th>@item.CreateUser</th>
+                <th>@string.Format("{0:dd.mm.yyyy}", item.ExpireDate)</th>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="AddCarusel" asp-controller="Carusel">Add banner</a>

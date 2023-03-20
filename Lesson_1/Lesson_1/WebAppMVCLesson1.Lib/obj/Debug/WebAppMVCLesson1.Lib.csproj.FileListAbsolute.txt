@@ -24,3 +24,17 @@ C:\Users\Алга Казакстан\source\repos\WebAppMVCLesson1.Lib\obj\Debug
 C:\Users\Алга Казакстан\source\repos\WebAppMVCLesson1.Lib\obj\Debug\WebAppMVCLesson1.Lib.csproj.CopyComplete
 C:\Users\Алга Казакстан\source\repos\WebAppMVCLesson1.Lib\obj\Debug\WebAppMVCLesson1.Lib.dll
 C:\Users\Алга Казакстан\source\repos\WebAppMVCLesson1.Lib\obj\Debug\WebAppMVCLesson1.Lib.pdb
+D:\Learning\asp.net-core\Lesson_1\Lesson_1\WebAppMVCLesson1.Lib\bin\Debug\WebAppMVCLesson1.Lib.dll.config
+D:\Learning\asp.net-core\Lesson_1\Lesson_1\WebAppMVCLesson1.Lib\bin\Debug\WebAppMVCLesson1.Lib.dll
+D:\Learning\asp.net-core\Lesson_1\Lesson_1\WebAppMVCLesson1.Lib\bin\Debug\WebAppMVCLesson1.Lib.pdb
+D:\Learning\asp.net-core\Lesson_1\Lesson_1\WebAppMVCLesson1.Lib\bin\Debug\EntityFramework.dll
+D:\Learning\asp.net-core\Lesson_1\Lesson_1\WebAppMVCLesson1.Lib\bin\Debug\EntityFramework.SqlServer.dll
+D:\Learning\asp.net-core\Lesson_1\Lesson_1\WebAppMVCLesson1.Lib\bin\Debug\EntityFramework.xml
+D:\Learning\asp.net-core\Lesson_1\Lesson_1\WebAppMVCLesson1.Lib\bin\Debug\EntityFramework.SqlServer.xml
+D:\Learning\asp.net-core\Lesson_1\Lesson_1\WebAppMVCLesson1.Lib\bin\Debug\ru\EntityFramework.resources.dll
+D:\Learning\asp.net-core\Lesson_1\Lesson_1\WebAppMVCLesson1.Lib\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+D:\Learning\asp.net-core\Lesson_1\Lesson_1\WebAppMVCLesson1.Lib\obj\Debug\WebAppMVCLesson1.Lib.csproj.AssemblyReference.cache
+D:\Learning\asp.net-core\Lesson_1\Lesson_1\WebAppMVCLesson1.Lib\obj\Debug\WebAppMVCLesson1.Lib.csproj.CoreCompileInputs.cache
+D:\Learning\asp.net-core\Lesson_1\Lesson_1\WebAppMVCLesson1.Lib\obj\Debug\WebAppMVCLesson1.Lib.csproj.CopyComplete
+D:\Learning\asp.net-core\Lesson_1\Lesson_1\WebAppMVCLesson1.Lib\obj\Debug\WebAppMVCLesson1.Lib.dll
+D:\Learning\asp.net-core\Lesson_1\Lesson_1\WebAppMVCLesson1.Lib\obj\Debug\WebAppMVCLesson1.Lib.pdb
