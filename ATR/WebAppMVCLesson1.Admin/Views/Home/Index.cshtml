@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Home Page";
+    ViewData["Discription"] = "Description Home Page";
+    ViewData["Keyword"] = "Home, Page, HomePage";
+
+}
+
+<div class="text-center">
+    <p>@ViewBag.HomeControllerGuid</p>
+    <p>@ViewBag.TotalGuid</p>
+<table class="tbale table-bordered table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model == null)
+            {
+                <tr>
+                    <td colspan="3">No Model Data</td>
+                </tr>
+            }
+            else
+            {
+                foreach (Product item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@string.Format("{0:C2}", item.Pricae)</td>
+                    </tr>
+                }
+            }
+        </tbody>
+</table>
+
+
+</div>
+

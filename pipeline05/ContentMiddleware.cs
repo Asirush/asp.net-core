@@ -1,4 +1,6 @@
-﻿namespace pipeline05
+﻿
+
+namespace pipeline05
 {
     public class ContentMiddleware
     {
