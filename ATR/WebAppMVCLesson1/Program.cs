@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Serilog;
+using Serilog.Formatting.Compact;
 using WebAppMVCLesson1.Middleware;
 using WebAppMVCLesson1.Models;
 
@@ -9,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog();
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Seq("http://localhost:5341")
+    .WriteTo.Debug(new RenderedCompactJsonFormatter())
     .CreateLogger();
 
 //builder.Host.ConfigureLogging(logingBuilder =>
