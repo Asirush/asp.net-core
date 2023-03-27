@@ -1,18 +1,27 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
+using Serilog;
 using WebAppMVCLesson1.Middleware;
 using WebAppMVCLesson1.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Host.ConfigureLogging(logingBuilder =>
-{
-    logingBuilder.ClearProviders();
-    logingBuilder.AddSeq();
-    //.AddDebug().AddEventLog().AddConsole();
-});
+builder.Host.UseSerilog();
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Seq("http://localhost:5341")
+    .CreateLogger();
 
-
+//builder.Host.ConfigureLogging(logingBuilder =>
+//{
+//    logingBuilder.ClearProviders();
+//    logingBuilder
+//    // --- seq logging
+//    .AddSeq()
+//    // --- sys logging
+//    .AddDebug()
+//    .AddEventLog()
+//    .AddConsole();
+//});
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

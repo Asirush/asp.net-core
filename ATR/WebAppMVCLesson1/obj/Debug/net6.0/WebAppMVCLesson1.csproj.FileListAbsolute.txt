@@ -197,3 +197,15 @@ D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\obj\Debug\net6.0\WebAppMVCLesson1.
 D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\obj\Debug\net6.0\WebAppMVCLesson1.genruntimeconfig.cache
 D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\obj\Debug\net6.0\ref\WebAppMVCLesson1.dll
 D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\bin\Debug\net6.0\Seq.Extensions.Logging.dll
+D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\bin\Debug\net6.0\Serilog.dll
+D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\bin\Debug\net6.0\Serilog.AspNetCore.dll
+D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\bin\Debug\net6.0\Serilog.Sinks.File.dll
+D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\bin\Debug\net6.0\Serilog.Sinks.PeriodicBatching.dll
+D:\Learning\asp.net-core\ATR\WebAppMVCLesson1\bin\Debug\net6.0\Serilog.Sinks.Seq.dll
