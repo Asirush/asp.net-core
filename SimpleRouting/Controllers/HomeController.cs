@@ -4,6 +4,8 @@ using System.Diagnostics;
 
 namespace SimpleRouting.Controllers
 {
+    [Route("AsUsual")]
+    [Route("Main")]
     [Route("[controller]")]
     public class HomeController : Controller
     {
@@ -42,7 +44,9 @@ namespace SimpleRouting.Controllers
         }
 
         //[Route("Synny")]
+        [Route("CheckPrivacy")]
         [Route("[controller]/[action]")]
+        [Route("~/PrivacyPage")]
         public IActionResult Privacy(params string[] obj)
         {
             var controller = RouteData.Values["controller"].ToString();
