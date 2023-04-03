@@ -44,9 +44,11 @@ namespace SimpleRouting.Controllers
         }
 
         //[Route("Synny")]
+        [HttpPost]
         [Route("CheckPrivacy")]
         [Route("[controller]/[action]")]
         [Route("~/PrivacyPage")]
+        [Route("action", Name = "Privacy")]
         public IActionResult Privacy(params string[] obj)
         {
             var controller = RouteData.Values["controller"].ToString();

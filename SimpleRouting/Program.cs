@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Routing.Constraints;
+using SimpleRouting.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,7 +28,8 @@ app.UseEndpoints(endpoints =>
         defaults: new
         {
             controller = "home",
-            action = "Index"
+            action = "Index",
+            customeConstraint = new UserAgentConstrain("Chrome")
         },
         constraints: new
         {
