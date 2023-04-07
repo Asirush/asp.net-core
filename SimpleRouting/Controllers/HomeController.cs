@@ -4,9 +4,9 @@ using System.Diagnostics;
 
 namespace SimpleRouting.Controllers
 {
-    [Route("AsUsual")]
-    [Route("Main")]
-    [Route("[controller]")]
+    //[Route("AsUsual")]
+    //[Route("Main")]
+    //[Route("[controller]")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -18,8 +18,34 @@ namespace SimpleRouting.Controllers
 
         public IActionResult Index()
         {
+            CookieOptions options = new CookieOptions();
+            options.Expires = DateTimeOffset.Now.AddMilliseconds(1000000000000);
+
+            Response.Cookies.Append("testCookies", "666", options);
+
+            string test = Request.Cookies["testCookies"];
+
+            ViewBag.Test = test;
+
+            Response.Cookies.Delete(test);
+
+            // sessions
+            HttpContext.Session.SetString("product", "pendrive");
+            string sessionValue = "";
+            if(HttpContext.Session != null)
+            {
+                sessionValue = HttpContext.Session.GetString("product");
+                if(string.IsNullOrEmpty(sessionValue))
+                {
+                    sessionValue = "Session Timed out";
+                }
+            }
+
+            ViewBag.SessionValue = sessionValue;
+
             return View();
         }
+
         #region lesson 1
         //public IActionResult Index(int id = 0)
         //{

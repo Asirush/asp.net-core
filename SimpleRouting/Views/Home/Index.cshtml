@@ -1,12 +1,35 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Builder
+@using Microsoft.AspNetCore.Localization
+@using Microsoft.Extensions.Options
+
+@inject IOptions<RequestLocalizationOptions> locOptions
+
+
+
+
+@{
     ViewData["Title"] = "Home Page";
+    var requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var cultureItems = locOptions.Value.SupportedCultures.Select(s => new SelectListItem
+            {
+                Value = s.Name,
+                Text = s.DisplayName
+            }).ToList();
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome Custom: </h1>
-    <!--<p>@ViewBag.Id</p>-->
+
+    <hr />
+    <form id="cultureForm" asp-action="Index">
+        <select onchange="SetCulture(this.value)" asp-items="cultureItems"></select>
+    </form>
+
+    <hr />
+
+@*    <!--<p>@ViewBag.Id</p>-->
     <ul>
-@*        <!--Routing in Program.cs-->
+        <!--Routing in Program.cs-->
         <li>A: @ViewBag.A</li>
         <li>B: @ViewBag.B</li>
         <li>C: @ViewBag.C</li>
@@ -15,15 +38,24 @@
         <li>id: @ViewBag.id</li>
         <li>name: @ViewBag.name</li>
 
-        <!--add route via parametr using name-->*@
+        <!--add route via parametr using name-->
         <a asp-action="Index">Link 1</a>
         <br />
         <a asp-controller="Invoices">Link 2</a>
     </ul>
 
-@*    <br/>
+    <br/>
 
-    <a asp-controller="Home" asp-action="Privacy">Custom URL</a>*@
-
+    <a asp-controller="Home" asp-action="Privacy">Custom URL</a>
+*@
+    <p>id: @ViewBag.id</p>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <script>
+        function SetCulture(selectedCulture){
+            var culture = "/?culture="+ selectedCulture + "&ui-culture=" + selectedCulture;
+            $("#cultureForm").action = culture;
+            $("#cultureForm").submit();            
+        }
+    </script>
 </div>

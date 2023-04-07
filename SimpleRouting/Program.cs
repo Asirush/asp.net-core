@@ -1,10 +1,38 @@
 using Microsoft.AspNetCore.Routing.Constraints;
 using SimpleRouting.Models;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews(); builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.Cookie.Name = "MyApp.Session";
+    options.IdleTimeout = TimeSpan.FromSeconds(10);
+    options.Cookie.HttpOnly = true;
+    options.Cookie.IsEssential = true;
+});
+
+builder.Services.AddMvc()
+    .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
+
+builder.Services.Configure<RequestLocalizationOptions>(
+    option =>
+    {
+        var supportedCulture = new[]
+        {
+            new CultureInfo("en-US"),
+            new CultureInfo("ru-RU"),
+            new CultureInfo("kk-KZ")
+        };
+        option.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
+        option.SupportedCultures = supportedCulture;
+        option.SupportedUICultures = supportedCulture;
+    });
 
 var app = builder.Build();
 
@@ -13,11 +41,17 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
 }
+
+app.UseSession(); // sessions should be higher then auth
+
 app.UseStaticFiles();
 
 app.UseRouting();
 
 app.UseAuthorization();
+
+var locOptions = app.Services.GetRequiredService<IOptions<RequestLocalizationOptions>>();
+app.UseRequestLocalization(locOptions.Value);
 
 #region lesson1
 //app.UseEndpoints(endpoints =>
@@ -80,9 +114,9 @@ app.UseAuthorization();
 
 #endregion
 
-app.MapControllerRoute(
-    name: "defaultApi",
-    pattern: "api/{action}");
+//app.MapControllerRoute(
+//    name: "defaultApi",
+//    pattern: "api/{action}");
 
 app.MapControllerRoute(
     name: "default",
