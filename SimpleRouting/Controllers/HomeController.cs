@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc;
 using SimpleRouting.Models;
 using System.Diagnostics;
 
@@ -16,32 +17,40 @@ namespace SimpleRouting.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string culture, string uiculture)
         {
-            CookieOptions options = new CookieOptions();
-            options.Expires = DateTimeOffset.Now.AddMilliseconds(1000000000000);
-
-            Response.Cookies.Append("testCookies", "666", options);
-
-            string test = Request.Cookies["testCookies"];
-
-            ViewBag.Test = test;
-
-            Response.Cookies.Delete(test);
-
-            // sessions
-            HttpContext.Session.SetString("product", "pendrive");
-            string sessionValue = "";
-            if(HttpContext.Session != null)
+            if (!string.IsNullOrEmpty(culture))
             {
-                sessionValue = HttpContext.Session.GetString("product");
-                if(string.IsNullOrEmpty(sessionValue))
-                {
-                    sessionValue = "Session Timed out";
-                }
-            }
+                Response.Cookies.Append(CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddMonths(1) });
 
-            ViewBag.SessionValue = sessionValue;
+            }
+            
+            //CookieOptions options = new CookieOptions();
+            //options.Expires = DateTimeOffset.Now.AddMilliseconds(1000000000000);
+
+            //Response.Cookies.Append("testCookies", "666", options);
+
+            //string test = Request.Cookies["testCookies"];
+
+            //ViewBag.Test = test;
+
+            //Response.Cookies.Delete(test);
+
+            //// sessions
+            //HttpContext.Session.SetString("product", "pendrive");
+            //string sessionValue = "";
+            //if(HttpContext.Session != null)
+            //{
+            //    sessionValue = HttpContext.Session.GetString("product");
+            //    if(string.IsNullOrEmpty(sessionValue))
+            //    {
+            //        sessionValue = "Session Timed out";
+            //    }
+            //}
+
+            //ViewBag.SessionValue = sessionValue;
 
             return View();
         }

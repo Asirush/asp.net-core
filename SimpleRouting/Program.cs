@@ -4,6 +4,7 @@ using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Mvc.Razor;
+using SimpleRouting.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,13 +26,27 @@ builder.Services.Configure<RequestLocalizationOptions>(
     {
         var supportedCulture = new[]
         {
-            new CultureInfo("en-US"),
-            new CultureInfo("ru-RU"),
-            new CultureInfo("kk-KZ")
+            new CultureInfo("en"),
+            new CultureInfo("ru"),
+            new CultureInfo("kk")
         };
-        option.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
+        option.DefaultRequestCulture = new RequestCulture(culture: "en", uiCulture: "en");
         option.SupportedCultures = supportedCulture;
         option.SupportedUICultures = supportedCulture;
+        option.AddInitialRequestCultureProvider(
+            new CustomRequestCultureProvider(async context => {
+                var currentCulture = "en";
+                var segment = context.Request.Path.Value.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
+
+                if(segment.Length >= 2)
+                {
+                    string lastSegment = segment[segment.Length - 1];
+                    currentCulture = lastSegment;
+                }
+
+                var requestCulture = new ProviderCultureResult(currentCulture);
+                return await Task.FromResult(requestCulture);
+            }));
     });
 
 var app = builder.Build();
@@ -121,6 +136,11 @@ app.UseRequestLocalization(locOptions.Value);
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}");
+
+app.MapControllerRoute(
+    name: "langs",
+    pattern: "en-US",
+    defaults: new {controller = "Home", action = "Index"});
 
 
 app.Run();
