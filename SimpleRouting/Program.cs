@@ -139,8 +139,18 @@ app.MapControllerRoute(
 
 app.MapControllerRoute(
     name: "langs",
-    pattern: "en-US",
+    pattern: "en",
     defaults: new {controller = "Home", action = "Index"});
+
+app.MapControllerRoute(
+    name: "langs",
+    pattern: "kk",
+    defaults: new { controller = "Home", action = "Index" });
+
+app.MapControllerRoute(
+    name: "langs",
+    pattern: "ru",
+    defaults: new { controller = "Home", action = "Index" });
 
 
 app.Run();
