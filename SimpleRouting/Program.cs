@@ -34,11 +34,12 @@ builder.Services.Configure<RequestLocalizationOptions>(
         option.SupportedCultures = supportedCulture;
         option.SupportedUICultures = supportedCulture;
         option.AddInitialRequestCultureProvider(
-            new CustomRequestCultureProvider(async context => {
+            new CustomRequestCultureProvider(async context =>
+            {
                 var currentCulture = "en";
                 var segment = context.Request.Path.Value.Split(new char[] { '/' }, StringSplitOptions.RemoveEmptyEntries);
 
-                if(segment.Length >= 2)
+                if (segment.Length >= 2)
                 {
                     string lastSegment = segment[segment.Length - 1];
                     currentCulture = lastSegment;
@@ -47,7 +48,11 @@ builder.Services.Configure<RequestLocalizationOptions>(
                 var requestCulture = new ProviderCultureResult(currentCulture);
                 return await Task.FromResult(requestCulture);
             }));
+
+        //option.AddInitialRequestCultureProvider(new MyCultureprovider());
     });
+
+builder.Services.AddLocalization(option => option.ResourcesPath = "Resources");
 
 var app = builder.Build();
 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using SimpleRouting.Models;
 using System.Diagnostics;
 
@@ -11,14 +12,19 @@ namespace SimpleRouting.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IStringLocalizer _localizer;
 
-        public HomeController(ILogger<HomeController> logger)
+
+        public HomeController(ILogger<HomeController> logger, IStringLocalizer localizer)
         {
             _logger = logger;
+            _localizer = localizer;
         }
 
         public IActionResult Index(string culture, string uiculture)
         {
+            ViewBag.Lang = _localizer["Lang"];
+
             if (!string.IsNullOrEmpty(culture))
             {
                 Response.Cookies.Append(CookieRequestCultureProvider.DefaultCookieName,
