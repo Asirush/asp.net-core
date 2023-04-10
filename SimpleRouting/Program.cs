@@ -9,7 +9,8 @@ using SimpleRouting.Controllers;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews(); builder.Services.AddDistributedMemoryCache();
+builder.Services.AddControllersWithViews().AddViewLocalization(); 
+builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
     options.Cookie.Name = "MyApp.Session";

@@ -2,7 +2,7 @@
 
 namespace SimpleRouting.Models
 {
-    public class MyCultureprovider : RequestCultureProvider
+    public class MyCultureProvider : ProviderCultureResult
     {
         public override Task<ProviderCultureResult> DetermineProviderCultureResearch(HttpContext httpContext)
         {

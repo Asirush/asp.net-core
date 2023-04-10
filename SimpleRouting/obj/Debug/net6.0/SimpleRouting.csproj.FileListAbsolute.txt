@@ -29,3 +29,5 @@ D:\Learning\asp.net-core\SimpleRouting\obj\Debug\net6.0\refint\SimpleRouting.dll
 D:\Learning\asp.net-core\SimpleRouting\obj\Debug\net6.0\SimpleRouting.pdb
 D:\Learning\asp.net-core\SimpleRouting\obj\Debug\net6.0\SimpleRouting.genruntimeconfig.cache
 D:\Learning\asp.net-core\SimpleRouting\obj\Debug\net6.0\ref\SimpleRouting.dll
+D:\Learning\asp.net-core\SimpleRouting\obj\Debug\net6.0\SimpleRouting.Resources.InvoiceController.InvoiceController.ru.resources
+D:\Learning\asp.net-core\SimpleRouting\obj\Debug\net6.0\SimpleRouting.csproj.GenerateResource.cache

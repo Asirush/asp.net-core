@@ -7,6 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="Resources\Controllers.HomeController.en.resx" />
+    <EmbeddedResource Remove="Resources\Controllers.HomeController.kk.resx" />
+    <EmbeddedResource Remove="Resources\Controllers.HomeController.ru.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Resources\Controllers.HomeController.kk.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\Controllers.HomeController.en.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\Controllers.HomeController.ru.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Localization" Version="2.2.0" />
   </ItemGroup>
 
