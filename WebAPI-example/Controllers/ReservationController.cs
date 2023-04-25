@@ -26,5 +26,14 @@ namespace WebAPI_example.Controllers
             }
             else return Ok(repository[id]);
         }
+
+        [HttpPost]
+        public Reservation Post([FromBody] Reservation res) => repository.AddReservation(new Reservation { Name = res.Name, StartLocation = res.StartLocation, EndLocation = res.EndLocation});
+
+        [HttpPut]
+        public Reservation Put([FromForm] Reservation res) => repository.UpdateReservation(res);
+
+        [HttpDelete("{id}")]
+        public void Delete(int id) => repository.DeleteReservation(id);
     }
 }
