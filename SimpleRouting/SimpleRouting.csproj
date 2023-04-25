@@ -13,13 +13,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Resources\Controllers.HomeController.kk.resx">
+    <None Include="Resources\Views\Home\Index.kk.resx">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Resources\Controllers.HomeController.en.resx">
+    <None Include="Resources\Views\Home\Index.en.resx">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Resources\Controllers.HomeController.ru.resx" />
+    <None Include="Resources\Views\Home\Index.ru.resx" />
   </ItemGroup>
 
   <ItemGroup>
