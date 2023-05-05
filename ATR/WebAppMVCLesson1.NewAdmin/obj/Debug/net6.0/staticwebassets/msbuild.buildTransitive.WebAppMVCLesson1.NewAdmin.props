@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\WebAppMVCLesson1.NewAdmin.props" />
-</Project>
